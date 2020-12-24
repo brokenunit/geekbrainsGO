@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"os"
+	"strconv"
 )
 
 //функция для вичисления числа фиббоначи
@@ -22,7 +23,13 @@ func fibo(n int) int {
 
 func main() {
 	fmt.Println("введите индекс числа")
+	var inputNum string
 	var n int
-	fmt.Scanln(&n)
+	fmt.Scanln(&inputNum)
+	n, err := strconv.Atoi(inputNum)
+	if err != nil {
+		fmt.Println("110")
+		os.Exit(1)
+	}
 	fmt.Println("Число Фиббоначи с индексом", n, "равно", fibo(n))
 }

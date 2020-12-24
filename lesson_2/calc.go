@@ -29,6 +29,9 @@ func main() {
 	case "*":
 		res = opOne * opTwo
 	case "/":
+		if opTwo == 0 {
+			os.Exit(100)
+		}
 		res = opOne / opTwo
 	case "^":
 		res = math.Pow(opOne, opTwo)

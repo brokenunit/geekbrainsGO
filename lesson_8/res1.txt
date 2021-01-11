@@ -1,0 +1,6 @@
+[5 4 3 2 1]
+goos: darwin
+goarch: amd64
+BenchmarkBubblesort-4   	16252520	        68.3 ns/op
+PASS
+ok  	_/Users/anton/geekbrainsGO/src	1.201s
